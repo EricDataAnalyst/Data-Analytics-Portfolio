@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark-mode">
+    <!-- Navbar -->
+    <header>
+        <nav>           
+            <ul>
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="projects.html"><b>Projects</b></a></li>
+                <li><a href="skills.html"><b>Skills</b></a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </li> 
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 Card -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Resources/DOH-Dengue.png" alt="Project Image">
+                </div>
+                <div class="project-content">
+                    <h3>Dengue Cases Analysis</h3>
+                    <p>A data-driven analysis of dengue case trends...</p>
+                    <a href="DengueCases.html" class="button">View Project</a>
+                    <a href="" class="button">Read Me</a>
+                </div>
+            </div>
+            <!-- You can duplicate this block for more projects -->
+             <!--Project Card 2-->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Resources/Retail-Sales-3.jpg" alt="Project Image">
+                </div>
+                <div class="project-content">
+                    <h3>E-commerce</h3>
+                    <p>A brief description of another project.</p>
+                    <a href="https://drive.google.com/file/d/1NxyO5veeYjPNqNDLeO9Fg1BRtpSksYsa/view?usp=drive_link" class="button">View Project</a>
+                    <a href="https://docs.google.com/document/d/12SLEmPAOGon68Kv4m6-QR3Ap8se7do8Q6znm6aLpDUo/edit?usp=drive_link" class="button">Read Me</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Resources/Behavior.png" alt="Project Image">
+                </div>
+                <div class="project-content">
+                    <h3>Customer Behavior-</h3>
+                    <p>E-commerce Customer Behavior Analysis.</p>
+                    <a href="https://drive.google.com/file/d/1NxyO5veeYjPNqNDLeO9Fg1BRtpSksYsa/view?usp=drive_link" class="button">View Project</a>
+                    <a href="https://docs.google.com/document/d/12SLEmPAOGon68Kv4m6-QR3Ap8se7do8Q6znm6aLpDUo/edit?usp=drive_link" class="button">Read Me</a>
+                </div>
+            </div>
+
+        </div>
+    </section>    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Eric Data Analyst. All Rights Reserved.</p>
+    </footer>
+    <script>
+        const toggleSwitch = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+    
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                toggleSwitch.checked = true;
+            }
+        }
+    
+        toggleSwitch.addEventListener('change', () => {
+            if (toggleSwitch.checked) {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        });
+    </script>    
+</body>
+</html>
